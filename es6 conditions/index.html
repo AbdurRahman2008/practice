@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <h1> Es6 Conditions</h1>
+    
+
+    <h3> This program will tell you your stage of life according to your age</h3>
+    <br>
+    <form onsubmit="ageCheck(event)">
+     Enter your age:
+     <input id="ageInput" type="number" required step="0.01">
+     <br>
+     <br>
+     <button>Check</button>
+
+    </form>
+
+    <h1 id="resultWindow"></h1>
+
+
+    <script>
+    function ageCheck(event) {
+
+        event.preventDefault();
+
+        let ageInput = document.querySelector("#ageInput").value;
+        ageInput = Number(ageInput)
+
+
+
+        if (ageInput < 13) {
+            console.log("You are a kid")
+            document.querySelector("#resultWindow").innerHTML = "You are a kid"
+        }
+
+        if (ageInput >= 13) {
+            console.log("You are a teenager")
+            document.querySelector("#resultWindow").innerHTML = "You are a teenager"
+        }
+
+        if (ageInput >= 20) {
+            console.log("You are an adult")
+            document.querySelector("#resultWindow").innerHTML = "You are an adult"
+        }
+
+        if (ageInput >= 50) {
+            console.log("You are old")
+            document.querySelector("#resultWindow").innerHTML = "You are old"
+        }
+
+        if (ageInput >= 100) {
+            console.log("You are going to die")
+            document.querySelector("#resultWindow").innerHTML = "Take some rest you are going to die"
+        }
+
+
+    }
+
+
+
+    </script>
+</body>
+</html>
