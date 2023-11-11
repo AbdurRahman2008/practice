@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <h1> Es6 Conditions (Ternary operators)</h1>
+    
+
+    <h3> This program will tell you your stage of life according to your age</h3>
+    <br>
+    <form onsubmit="ageCheck(event)">
+     Enter your age:
+     <input id="ageInput" type="number" required step="0.01">
+     <br>
+     <br>
+     <button>Check Age</button>
+
+    </form>
+
+    <h1 id="resultWindow"></h1>
+
+
+    <script>
+    function ageCheck(event) {
+
+        event.preventDefault();
+
+        let ageInput = document.querySelector("#ageInput").value;
+        ageInput = Number(ageInput) 
+
+  
+       let result = ` You are a ${ (ageInput < 0) ? "nothing, please enter a valid age i.e 1-100" : (ageInput < 13) ? "kid" : (ageInput < 20) ? "teenager" : (ageInput < 55) ? "adult" : (ageInput <= 100) ? "old" : "nothing, please enter a valid age i.e 1-100"}    `
+       console.log(result)
+       document.querySelector("#resultWindow").innerHTML = result 
+
+
+        
+
+    }
+
+
+
+    </script>
+</body>
+</html>
