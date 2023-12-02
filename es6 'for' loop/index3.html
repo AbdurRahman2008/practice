@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       let dishes = []
+       for(a=0; a<=5; a++) {
+        let fav_dish = prompt("Enter your favourite dishes or press q for quit")
+        if (fav_dish!='q') {
+            dishes.push(fav_dish)
+        } 
+        else {
+            break 
+        }
+        
+       }
+       alert(dishes)
+       console.log(dishes)
+       
+
+    </script>
+</body>
+</html>

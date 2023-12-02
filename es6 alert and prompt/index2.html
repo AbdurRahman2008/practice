@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+ let institute_name = prompt("Kindly enter your institute name")
+ let student_name = prompt("Enter your name")
+ let roll_number = Number(prompt("Enter your roll number"))
+ let faculity = prompt("Enter your faculity please")
+
+
+ let pakstudy = Number(prompt("enter score of pakstudy"))
+ let urdu = Number(prompt("enter score of urdu"))
+ let english = Number(prompt("enter score of english"))
+ let biology = Number(prompt("enter score of biology"))
+ let chemistry = Number(prompt("enter score of chemistry"))
+ let physics = Number(prompt("enter score of physics"))
+
+ let result = pakstudy + urdu + english + chemistry + physics + biology
+ let percentage = result / 550 * 100 
+
+ var grade = ""
+
+
+ if (percentage >= 90) {
+          grade = "A+"
+
+ }  else if (percentage >= 80) {
+          grade = "A"
+          
+ } else if (percentage >= 70) {
+          grade = "B"
+          
+ } else if (percentage >= 60) {
+          grade = "C"
+          
+ } else if (percentage >= 50) {
+          grade = "D"
+          
+ } else  {
+          grade = "F"         
+ }
+
+
+ alert(`          ~~~~~~~~~~ ${institute_name} ~~~~~~~~~~~~~
+      ____________________________________________________________
+            
+
+          Student Name:   ${student_name}
+          Roll number:   ${roll_number}
+          Faculity:   ${faculity}
+          Obtained =   ${result}
+          Your grade =    ${grade}   
+          Your percentage =    ${percentage}
+          
+    --------------------------------------------------------------------
+          ` ) 
+ 
+    </script>
+</body>
+</html>

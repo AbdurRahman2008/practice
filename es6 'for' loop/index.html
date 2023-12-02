@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+ let usernames = []
+
+ for(let a=0;  a<5; a++) {
+
+    let username = prompt("create a username")
+
+  if (username!="admin"  && username!="Admin" && username!="ADMIN" && username!="New Admin"    )  {
+
+            if (usernames.includes(username)) 
+            {
+              alert("Username not Available")
+            }
+
+          
+
+            else
+            {
+                if (username.length >= 5 && username.length <= 20) {
+                  usernames.push(username)
+                  alert("Username created")
+                }
+
+                
+            }
+ 
+       if (username.length >= 5  && username.length <=20) {
+
+         usernames.push(username)
+         alert("Username is added")
+
+       }  
+
+       else {
+        alert("Invalid username")
+       }
+
+     } 
+     
+     
+  else {
+        alert("Invalid username")
+     }
+
+
+ }      
+
+
+
+ 
+
+    </script>
+</body>
+</html>
