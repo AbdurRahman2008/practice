@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+  let percentage = Number(prompt("Enter your percentage"))
+
+  switch(true) {
+
+  case percentage > 100:
+    alert("Enter a percentage b/w 1-100")
+    break
+  case percentage >= 80:
+    alert("Your grade is A+")
+    break
+  case percentage >= 70:
+    alert("Your grade is A")
+    break
+  case percentage >= 60:
+    alert("Your grade is B")
+    break
+  case percentage >= 50:
+    alert("Your grade is C")
+    break
+  case percentage >= 45:
+    alert("Your grade is D")
+    break
+  case percentage > -1:
+    alert("Your grade is F")
+    break
+    case percentage < 0:
+    alert("Enter a percentage b/w 1-100")
+    break
+    case '':
+        alert("Kindly enter percentage")
+
+    default:
+        alert("Enter valid percentage")
+
+  }
+
+ 
+
+
+    </script>
+</body>
+</html>

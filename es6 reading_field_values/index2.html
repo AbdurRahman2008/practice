@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onSubmit="checkAddress('email');">
+       <h1> Email: </h1>
+        <input type="text" id="email" style="font-size: 25px;">
+        <input type="submit" value="Submit" style="font-size: 25px;">
+        </form>
+                         
+
+   
+   <script>
+
+  let emails = ['111abdurrehman111@gmail.com', 'saathtech@gmail.com', 'ali@gmail.com']
+
+        function checkAddress(email){
+     let user_email = document.getElementById(email).value
+     if ( user_email !== "") {
+        
+        if(emails.includes(user_email)) {
+            document.write(` Welcome ${user_email} to our page `)
+        }
+        else {
+            alert("Invalid email address! Kindly enter a correct address")
+        }
+
+     }
+     else {
+        alert("Please enter a email address")
+     }
+    }
+
+    </script>
+
+    
+</body>
+</html>

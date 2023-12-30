@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <!-- JS is down -->
+
+    <script>
+
+ function mycode() {
+    alert("Hello I am event response nigga")
+}
+
+ function add(a,b) {
+    document.write(`Sum of two number ${a} and ${b} is  ${a+b}) `)
+ }
+
+ function birthday(a,b) {
+    document.write(`Birthday of ${a} is on ${b}`)
+ }
+
+ function wedding(a,b) {
+    document.write(`The Wedding Ceremony of ${a} and ${b} is on 1 January, 2024`)
+ }
+
+ function findsum(arr) {
+    var sum = 0
+    for(a=0;a<arr.length;a++) {
+     sum += arr[a]
+    }
+    document.write(`The sum of ${arr} is ${sum}`)
+ }
+    </script>
+
+
+<!-- Html is down -->
+
+<a href="#" onclick="alert('Hi I am events response')"> Click Me</a>
+<br> <br> <br>
+
+ <a href="#" onclick="mycode()"> Click Me Again</a>
+ <br> <br> <br>
+
+<a href="#" onclick="var a = 100; var b = 100; add(a,b)"> Click to Add</a>
+<br> <br> <br>
+
+<a href="#" onclick="var a = 'Abdur Rahman'; var b = '21 December'; birthday(a,b)"> Confirm your birthday</a>
+<br> <br> <br>
+
+<input type="button" value="findSum" onclick="var arr = [2,3,67,8,10,75,42,9];findsum(arr)"> </input>
+
+
+
+
+
+</body>
+</html>

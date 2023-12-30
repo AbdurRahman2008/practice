@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onSubmit="checkAddress('username');">
+       <h1> Username </h1>
+        <input type="text" id="username" style="font-size: 25px;">
+        <input type="submit" value="Submit" style="font-size: 25px;">
+        </form>
+                         
+
+   
+   <script>
+
+  let user_names = ['pro_gamer', 'ali_gamer', 'notyourtype', 'noob']
+
+        function checkAddress(username){
+     let user_name = document.getElementById(username).value
+     if ( user_name!== "") {
+        
+        if(user_names.includes(user_name)) {
+            document.write(` Welcome ${user_name} to our first shooter game! `)
+        }
+        else {
+            alert("Invalid username! Kindly enter a correct or existing username.")
+        }
+
+     }
+     else {
+        alert("Please enter a username")
+     }
+    }
+
+    </script>
+
+    
+</body>
+</html>

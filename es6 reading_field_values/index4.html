@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onSubmit="checkAddress('email', 'pwd');">
+       <h1> Email: </h1>
+        <input type="text" id="email" style="font-size: 25px;">
+        <br> <br>
+        <h1> Password: </h1>
+        <input type="password" id="pwd" style="font-size: 25px;">
+        <input type="submit" value="Submit" style="font-size: 25px;">
+        </form>
+                         
+
+   
+   <script>
+
+  let emails = ['111abdurrehman111@gmail.com', 'saathtech@gmail.com', 'ali@gmail.com']
+  let passes = ['password123', '123456', 'ali123']
+
+        function checkAddress(email, pwd){
+
+     let user_email = document.getElementById(email).value
+     let user_pwd = document.getElementById(pwd).value
+
+     if ( user_email !== "" && user_pwd !== "") {
+    
+       
+        if( emails.includes(user_email) && passes.includes(user_pwd)) {
+            document.write(` Welcome ${user_email} to our page `)
+
+            if(emails.indexOf(user_email) == passes.indexOf(user_pwd)) {
+                document.write(``)
+            }
+            else {
+                document.write("Invalid email address or password! Please enter correct credentials.")
+            }
+        }
+        else {
+            alert("Invalid email address or password! Please enter correct credentials.")
+        }
+
+     }
+
+     else {
+        alert("Please enter a email address and password")
+     }
+
+    }
+
+    </script>
+    
+</body>
+</html>
