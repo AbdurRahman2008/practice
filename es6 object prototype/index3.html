@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+function Plan(name, price, space, transfer, pages, discountMonths) 
+{
+    this.name = name;
+    this.price = price;
+    this.space = space;
+    this.transfer = transfer;
+    this.pages = pages;
+    this.discountMonths = discountMonths;
+
+    this.calcAnnual = function() 
+    {
+    var bestPrice = this.price;
+    var currDate = new Date();
+    var thisMo = currDate.getMonth()+1;
+
+        for (var i = 0; i < this.discountMonths.length; i++) 
+        {
+            if (this.discountMonths[i] === thisMo) 
+                {
+                bestPrice = this.price * .80;
+                break;
+                }
+        }
+        return bestPrice * 12;
+    };
+}
+
+ myPlan = new Plan('Advance', 99, 99, 1000, 5000, 500, [6,12])
+ apkaPlan = new Plan('Basic', 50, 99, 100, 500, 50, [1, 6,12])
+
+ console.log(myPlan)
+    </script> 
+</body>
+</html>
