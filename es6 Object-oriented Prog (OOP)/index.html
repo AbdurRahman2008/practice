@@ -7,6 +7,8 @@
 </head>
 <body>
 
+    <h1> Employee Details</h1>
+
     <script>
         
         class Employee{
@@ -16,13 +18,38 @@
                 this.experiance = experiance
                 this.company = company 
             }
+
+            employee_details(){
+                document.write(`
+                    Employee Name : ${this.fname} ${this.lname} <br>
+                    Employee Exp: ${this.experiance} <br>
+                    Company: ${this.company} <br> 
+
+                    <br>`
+                )
+            }
         }
 
+// Employee.prototype.employee_details(){
+//                 document.write(
+//                     `Employee Name : ${this.fname} ${this.lname}
+//                     Employee Exp: ${this.experiance} 
+//                     Company: ${this.company}` 
+//                )            
+// }
+
+        
 emp1 = new Employee('Ali', 'Shah', 10, 'Microsoft')
 emp2 = new Employee('John', 'Abraham', 6, 'Microsoft')
 emp3 = new Employee('Peter', 'Parker', 2, 'Microsoft')
 
 employee_list = [emp1, emp2, emp3]
+
+for(i=0; i<employee_list.length;i++) {
+       employee_list[i].employee_details()
+}
+    
+    
     </script>
     
 </body>
