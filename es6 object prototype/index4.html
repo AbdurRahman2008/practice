@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plans</title>
 </head>
 <body>
     
     <script>
+
+    function Person(name, age, gender, cnic) {
+    this.name = name,
+    this.age = age,
+    this.gender = gender,
+    this.cnic = cnic
+ }
+
+ let p1 = new Person('Ali', 20, 'male', '01234')
+ let p2 = new Person('Abdullah', 28, 'male', '56789')
+
+
 
 function Plan(name, price, space, transfer, pages, discountMonths) 
 {
@@ -17,8 +29,9 @@ function Plan(name, price, space, transfer, pages, discountMonths)
     this.transfer = transfer;
     this.pages = pages;
     this.discountMonths = discountMonths;
+}
 
-    this.calcAnnual = function() 
+    Plan.prototype.calcAnnual = function() 
     {
     var bestPrice = this.price;
     var currDate = new Date();
@@ -34,12 +47,14 @@ function Plan(name, price, space, transfer, pages, discountMonths)
         }
         return bestPrice * 12;
     };
-}
 
- myPlan = new Plan('Advance', 99, 99, 1000, 5000, 500, [6,12])
- apkaPlan = new Plan('Basic', 50, 99, 100, 500, 50, [1, 6,12])
 
- console.log(myPlan)
+ myPlan = new Plan('Advance', 99.99, 1000, 5000, 500, [6,12])
+ apkaPlan = new Plan('Basic', 50.99, 100, 500, 50, [1,6,12])
+ 
+
+
+ 
     </script> 
 </body>
 </html>
