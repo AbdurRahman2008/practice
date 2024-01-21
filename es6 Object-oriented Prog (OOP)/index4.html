@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Abdur Rahman Bank</h1>
+    <h3>Kindly open console to check your account details</h3>
+
+    <script>
+
+        class BankAccount {
+            constructor(account_number, account_holder_name, balance) {
+                this.account_number = account_number
+                this.account_holder_name = account_holder_name
+                this.balance = balance
+            }
+
+            deposit(amt){
+                this.balance = this.balance + amt
+                alert(`Yakeen rakhen apke passein account mein chale gaye hain `)
+
+            }
+            withdraw(amt){
+                if(this.balance<amt) {
+                    alert(`Tum ghareeb ho itne passein acc mein nahi hain `)
+                }
+                else{
+                this.balance = balance - amt
+            }
+
+            }
+            transfer(beneficiery_acc, amt){
+
+                for(a=0; a<accounts.length; a++){
+                    if(accounts[a].account_number === beneficiery_acc){
+                        accounts[a].balance = accounts[a].balance + amt
+                        this.balance = this.balance - amt
+                        alert("Amount transferred successfully")
+                    }
+                }
+            }
+
+            balance(){
+                alert(`Your account balance is ${this.balance}`)
+            }
+           
+
+        }
+
+
+acc1 = new BankAccount(101, 'Ali', 20000)
+acc2 = new BankAccount(102, 'Muhammad', 30000)
+acc3 = new BankAccount(103, 'Babar', 1000)
+
+accounts = []
+accounts.push(acc1,acc2,acc3)
+    </script>
+</body>
+</html>

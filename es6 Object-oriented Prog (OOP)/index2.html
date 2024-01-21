@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Car Details</h1>
+
+    <script>
+        
+        class Car{
+            constructor(cname, model, engine, carhp, torque, max_speed){
+                this.cname = cname
+                this.model = model
+                this.engine = engine
+                this.carhp = carhp
+                this.torque = torque
+                this.max_speed = max_speed
+            }
+
+            car_details(){
+                document.write(`
+                    Car Name : ${this.cname} <br>
+                    Car Model : ${this.model} <br>
+                    Engine : ${this.engine} <br> 
+                    Horsepower: ${this.carhp} <br> 
+                    Car Torque: ${this.torque} <br> 
+                    Max Speed: ${this.max_speed} <br> 
+
+                    <br>`
+                )
+            }
+        }
+
+
+        
+car1 = new Car('BMW', 'M5 CS', 'twin-turbo 4.4 liter V8', '630 watt', '750Nm', '310 (km/h)')
+car2 = new Car('Koenigsegg ', 'Jesko', 'twin-turbocharged 5 liter V8', '1280 watt', '1000 Nm', '531 (km/h)')
+
+
+car_list = [car1, car2]
+
+for(i=0; i<car_list.length;i++) {
+       car_list[i].car_details()
+}
+    
+    
+    </script>
+    
+</body>
+</html>

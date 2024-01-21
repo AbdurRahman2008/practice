@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Book{
+            constructor(name, author, publication_yr, price){
+                this.name = name
+                this.author = author
+                this.publication_yr = publication_yr
+                this.price = price
+            }
+
+            book_details(){
+             document.write(`  Book Name: ${this.name} <br>
+                 Author Name: ${this.author} <br>
+                 Publication Year: ${this.publication_yr} <br>
+                 Price: ${this.price} <br>
+                 <br>
+            `)
+            }
+        }
+
+book1 = new Book('Harry Potter', 'J.K Rowling', 1997, '3000RS' )
+book2 = new Book('Harry Potter', 'Robert Greene', 1998, '1000Rs')
+         
+
+
+book_list = [book1, book2]
+
+for(i=0; i<book_list.length;i++) {
+       book_list[i].book_details()
+}
+    
+document.write('The sale price for Harry Potter book is 899Rs and for Power book is 2699Rs. BUY NOW!')
+
+
+    </script>
+</body>
+</html>

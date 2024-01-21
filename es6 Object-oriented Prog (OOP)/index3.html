@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+ class Rectangle {
+    constructor(length, width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    get_area(){
+        return this.length*this.width;
+    }
+    get_perimeter(){
+        return 2*(this.length + this.width)
+    }
+
+    display() {
+     document.write(`The area of rectangle is ${a.get_area()} and its perimeter is ${a.get_perimeter()}`)
+    }
+ }
+
+ const a = new Rectangle (2,3)
+ a.display();
+
+    </script>
+</body>
+</html>
